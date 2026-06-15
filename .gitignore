@@ -14,6 +14,9 @@
 *.bed
 *.bim
 *.fam
+*.prune.in
+*.prune.out
+*.nosex
 
 # Large reference files
 *.fa

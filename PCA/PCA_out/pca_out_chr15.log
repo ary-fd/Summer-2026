@@ -1,0 +1,26 @@
+PLINK v1.90b6.24 64-bit (6 Jun 2021)
+Options in effect:
+  --bfile /u/scratch/a/aryadini/pruned_chr15
+  --out /u/scratch/a/aryadini/pca_out_chr15
+  --pca 10
+
+Hostname: n6123
+Working directory: /u/home/a/aryadini
+Start time: Wed Jun 10 16:37:37 2026
+
+Random number seed: 1781134657
+64386 MB RAM detected; reserving 32193 MB for main workspace.
+1945665 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to /u/scratch/a/aryadini/pca_out_chr15.nosex .
+Using up to 15 threads (change this with --threads).
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.99997.
+1945665 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to /u/scratch/a/aryadini/pca_out_chr15.eigenval and
+/u/scratch/a/aryadini/pca_out_chr15.eigenvec .
+
+End time: Wed Jun 10 16:43:34 2026
