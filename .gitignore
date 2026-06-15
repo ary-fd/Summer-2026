@@ -1,0 +1,39 @@
+# Large sequencing files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bam.bai
+*.sam
+*.vcf
+*.vcf.gz
+*.bcf
+
+#PLINK genotype files
+*.bed
+*.bim
+*.fam
+
+# Large reference files
+*.fa
+*.fasta
+*.fai
+*.gtf
+*.gff
+
+# Intermediate outputs
+*.tmp
+*.temp
+
+# Large tables/matrices
+*.h5
+*.hdf5
+
+# Python clutter
+__pycache__/
+*.pyc
+
+
+# System files
+.DS_Store
