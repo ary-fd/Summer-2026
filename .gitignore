@@ -18,6 +18,12 @@
 *.prune.out
 *.nosex
 
+#eigenstrat genotype files
+*.geno
+*.snp
+*.ind
+*.anc
+
 # Large reference files
 *.fa
 *.fasta
