@@ -3,10 +3,10 @@
 #$ -j y
 #$ -N practice_msprime
 #$ -l h_data=1G,h_rt=03:00:00
-#$ -o /u/project/sriram/aryadini/Summer-2026/msprime_practice/logs/$JOB_NAME.o$JOB_ID
+#$ -o /u/scratch/a/aryadini/msprime_practice/logs/$JOB_NAME.o$JOB_ID
 set -x
 
-cd /u/project/sriram/aryadini/Summer-2026/msprime_practice
+cd /u/scratch/a/aryadini/msprime_practice
 source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
 conda activate msprime_env
 
@@ -36,7 +36,7 @@ model=practice
 json=sample
 nsite=100000
 rep=1
-dir=/u/project/sriram/aryadini/Summer-2026/msprime_practice
+dir=/u/scratch/a/aryadini/msprime_practice
 
 echo "Starting simulation"
 python ${dir}/archiesim.py \
