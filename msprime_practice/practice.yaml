@@ -1,0 +1,27 @@
+time_units: generations
+generation_time: 1
+
+demes:
+- name: Africa
+  epochs:
+  - {end_time: 0, start_size: 10000}
+
+- name: Neanderthal
+  start_time: 12000
+  ancestors: [Africa]
+  epochs:
+  - {end_time: 6200, start_size: 10000}
+  - {end_time: 6000, start_size: 100.0}
+  - {end_time: 0, start_size: 10000.0}
+
+- name: Eurasia
+  start_time: 2500
+  ancestors: [Africa]
+  epochs:
+  - {end_time: 0, start_size: 10000}
+  
+pulses:
+- sources: [Neanderthal]
+  dest: Eurasia
+  time: 2000
+  proportions: [0.02]
