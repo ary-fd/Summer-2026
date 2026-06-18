@@ -35,28 +35,20 @@ import numpy as np
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _split_group_sizes(kept_individuals):
+def _infer_n_african(kept_individuals):
     """
-    Return (n_african, n_neanderthal) individual counts.
+    Infer how many of the kept individuals are African vs Neanderthal.
 
-    kept_individuals is ordered: Africans first, then Neanderthals,
-    as produced by filter_derived_shared().
+    filter_derived_shared() guarantees the order is [afr_inds..., nea_inds...].
+    We detect the boundary by finding where the population label changes to a
+    known archaic label. Falls back to raising a clear error with instructions.
     """
-    african_pops     = {"Yoruba", "Mbuti", "Dinka", "Mandenka",
-                        "YRI", "ESN", "GWD", "MSL"}  # extend as needed
-    neanderthal_pops = {"Neanderthal", "Vindija", "Altai", "Denisova"}
-
-    n_afr = sum(1 for _, _, pop in kept_individuals if pop in african_pops)
-    n_nea = sum(1 for _, _, pop in kept_individuals if pop in neanderthal_pops)
-
-    if n_afr + n_nea != len(kept_individuals):
-        # Fallback: assume first block = African, second block = Neanderthal
-        # (matches the column order guarantee from filter_derived_shared)
-        raise ValueError(
-            "Could not classify all kept individuals into African / Neanderthal. "
-            "Pass n_african explicitly via the n_african parameter."
-        )
-    return n_afr, n_nea
+    archaic_pops = {"Neanderthal", "Vindija", "Altai", "Denisova"}
+    for i, (_, _, pop) in enumerate(kept_individuals):
+        if pop in archaic_pops:
+            return i  # first archaic = boundary; everything before is African
+    # All individuals are non-archaic
+    return len(kept_individuals)
 
 
 def _derived_dosage(dosage_row, ancestral, ref, alt):
@@ -137,7 +129,7 @@ def compute_csfs(
     bin by total SNP count.
     """
     if n_african is None:
-        n_african, _ = _split_group_sizes(kept_individuals)
+        n_african = _infer_n_african(kept_individuals)
 
     n_neanderthal = len(kept_individuals) - n_african
     n_chrom_max   = 2 * n_african
@@ -261,34 +253,36 @@ if __name__ == "__main__":
     from filter_derived_alleles import filter_derived_shared
 
     parser = argparse.ArgumentParser(
-        description="Compute CSFS (Durvasula & Sankararaman 2020) from EIGENSTRAT files."
+        description="Filter SNPs and compute CSFS (Durvasula & Sankararaman 2020)."
     )
-    parser.add_argument("--geno", required=True)
-    parser.add_argument("--snp",  required=True)
-    parser.add_argument("--ind",  required=True)
-    parser.add_argument("--african-pops",     nargs="+",
-                        default=["Yoruba", "Mbuti", "Dinka", "Mandenka"])
-    parser.add_argument("--neanderthal-pops", nargs="+",
-                        default=["Neanderthal", "Vindija", "Altai"])
-    parser.add_argument("--chimp-pops",       nargs="+",
-                        default=["Chimp", "PanTro"])
+    parser.add_argument("--african-geno", required=True)
+    parser.add_argument("--african-snp",  required=True)
+    parser.add_argument("--african-ind",  required=True)
+    parser.add_argument("--neanderthal-geno", required=True)
+    parser.add_argument("--neanderthal-snp",  required=True)
+    parser.add_argument("--neanderthal-ind",  required=True)
+    parser.add_argument("--anc", default=None,
+                        help="True introgression .anc file (optional, passed through)")
     parser.add_argument("--condition-on-archaic",
                         choices=["any", "hom", "random"], default="any",
-                        help="How to treat het archaic sites (default: any)")
+                        help="How to treat het Neanderthal sites (default: any)")
     parser.add_argument("--save-npy", metavar="PREFIX",
                         help="Save csfs array to PREFIX_csfs.npy")
     args = parser.parse_args()
 
-    geno_array, snp_info, kept_inds = filter_derived_shared(
-        geno_file        = args.geno,
-        snp_file         = args.snp,
-        ind_file         = args.ind,
-        african_pops     = args.african_pops,
-        neanderthal_pops = args.neanderthal_pops,
-        chimp_pops       = args.chimp_pops,
+    geno_array, snp_info, kept_inds, anc_matrix = filter_derived_shared(
+        african_geno     = args.african_geno,
+        african_snp      = args.african_snp,
+        african_ind      = args.african_ind,
+        neanderthal_geno = args.neanderthal_geno,
+        neanderthal_snp  = args.neanderthal_snp,
+        neanderthal_ind  = args.neanderthal_ind,
+        anc_file         = args.anc,
     )
 
-    n_african = sum(1 for _, _, pop in kept_inds if pop in set(args.african_pops))
+    # African individuals are always the first block in kept_inds;
+    # n_african is inferred automatically from the population label boundary.
+    n_african = None  # let compute_csfs call _infer_n_african
 
     print("\nComputing CSFS ...")
     csfs, n_chrom = compute_csfs(

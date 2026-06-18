@@ -1,0 +1,378 @@
++ cd /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /u/project/sriram/aryadini/miniforge3/bin/conda
++++ dirname /u/project/sriram/aryadini/miniforge3/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/condabin:/work/13708218.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ conda activate msprime_env
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate msprime_env
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate msprime_env
+++ '[' -n '' ']'
+++ /u/project/sriram/aryadini/miniforge3/bin/conda shell.posix activate msprime_env
++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708218.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708218.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ PS1='(msprime_env) '
+++ export PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708218.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708218.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=msprime_env
+++ CONDA_DEFAULT_ENV=msprime_env
+++ export 'CONDA_PROMPT_MODIFIER=(msprime_env) '
+++ CONDA_PROMPT_MODIFIER='(msprime_env) '
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh
++++ export GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ export GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
++++ GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ for pre in '${rem}'
++++ test '' = /u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ conda_catalog_files=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ EIGENSTRAT=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat
++ SCRIPTS=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ OUT=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ TAG=ghost_sim
++ POP=Africa
++ INTROGRESS=Ghost
++ NEANDERTHAL=Neanderthal
++ AFR_GENO=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno
++ AFR_SNP=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp
++ AFR_IND=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind
++ NEA_GENO=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno
++ NEA_SNP=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp
++ NEA_IND=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind
++ ANC=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc
++ echo 'Step 1: filtering derived alleles shared between Africa and Neanderthal'
+Step 1: filtering derived alleles shared between Africa and Neanderthal
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filter_derived_alleles.py --african-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno --african-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp --african-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind --neanderthal-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno --neanderthal-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp --neanderthal-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind --anc /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc --save-npy /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered
+Reading African files ...
+  100 African individuals, 1430 SNPs
+Reading Neanderthal files ...
+  100 Neanderthal individuals, 1430 SNPs
+Reading .anc file ...
+Filtering SNPs ...
+  SNPs passing filter: 372 / 1430
+
+geno_array shape : (372, 200)  (SNPs × individuals)
+dtype            : int8
+anc_matrix shape : (372, 100)  (SNPs × African haplotypes)
+Saved geno_array to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy
+Saved anc_matrix to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy
++ echo 'Step 2: computing CSFS'
+Step 2: computing CSFS
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/compute_csfs.py --african-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno --african-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp --african-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind --neanderthal-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno --neanderthal-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp --neanderthal-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind --anc /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc --save-npy /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs
+Reading African files ...
+  100 African individuals, 1430 SNPs
+Reading Neanderthal files ...
+  100 Neanderthal individuals, 1430 SNPs
+Reading .anc file ...
+Filtering SNPs ...
+  SNPs passing filter: 372 / 1430
+
+Computing CSFS ...
+
+CSFS (n_chrom = 200, total SNPs = 372)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.005          0     0.000000
+    2    0.010          0     0.000000
+    3    0.015          0     0.000000
+    4    0.020          0     0.000000
+    5    0.025          1     0.002688
+    6    0.030          0     0.000000
+    7    0.035          0     0.000000
+    8    0.040          0     0.000000
+    9    0.045          0     0.000000
+   10    0.050          0     0.000000
+   11    0.055          2     0.005376
+   12    0.060          0     0.000000
+   13    0.065          1     0.002688
+   14    0.070          0     0.000000
+   15    0.075          0     0.000000
+   16    0.080          2     0.005376
+   17    0.085          1     0.002688
+   18    0.090          0     0.000000
+   19    0.095          0     0.000000
+   20    0.100          0     0.000000
+   21    0.105          2     0.005376
+   22    0.110          0     0.000000
+   23    0.115          0     0.000000
+   24    0.120          0     0.000000
+   25    0.125          2     0.005376
+   26    0.130          0     0.000000
+   27    0.135          1     0.002688
+   28    0.140          0     0.000000
+   29    0.145          0     0.000000
+   30    0.150          0     0.000000
+   31    0.155          1     0.002688
+   32    0.160          2     0.005376
+   33    0.165          0     0.000000
+   34    0.170          5     0.013441
+   35    0.175          0     0.000000
+   36    0.180          1     0.002688
+   37    0.185          1     0.002688
+   38    0.190          0     0.000000
+   39    0.195          0     0.000000
+   40    0.200          0     0.000000
+   41    0.205          1     0.002688
+   42    0.210          0     0.000000
+   43    0.215          2     0.005376
+   44    0.220          1     0.002688
+   45    0.225          1     0.002688
+   46    0.230          0     0.000000
+   47    0.235          0     0.000000
+   48    0.240          3     0.008065
+   49    0.245          0     0.000000
+   50    0.250          1     0.002688
+   51    0.255          0     0.000000
+   52    0.260          0     0.000000
+   53    0.265          0     0.000000
+   54    0.270          0     0.000000
+   55    0.275          1     0.002688
+   56    0.280          0     0.000000
+   57    0.285          0     0.000000
+   58    0.290          2     0.005376
+   59    0.295          1     0.002688
+   60    0.300          0     0.000000
+   61    0.305          3     0.008065
+   62    0.310          0     0.000000
+   63    0.315          1     0.002688
+   64    0.320          0     0.000000
+   65    0.325          0     0.000000
+   66    0.330          1     0.002688
+   67    0.335          0     0.000000
+   68    0.340          1     0.002688
+   69    0.345          0     0.000000
+   70    0.350          0     0.000000
+   71    0.355          1     0.002688
+   72    0.360          5     0.013441
+   73    0.365          1     0.002688
+   74    0.370          1     0.002688
+   75    0.375          0     0.000000
+   76    0.380          0     0.000000
+   77    0.385          2     0.005376
+   78    0.390          0     0.000000
+   79    0.395          0     0.000000
+   80    0.400          0     0.000000
+   81    0.405          0     0.000000
+   82    0.410          0     0.000000
+   83    0.415          0     0.000000
+   84    0.420          1     0.002688
+   85    0.425          0     0.000000
+   86    0.430          0     0.000000
+   87    0.435          0     0.000000
+   88    0.440          0     0.000000
+   89    0.445          0     0.000000
+   90    0.450          0     0.000000
+   91    0.455          0     0.000000
+   92    0.460          0     0.000000
+   93    0.465          0     0.000000
+   94    0.470          3     0.008065
+   95    0.475          2     0.005376
+   96    0.480          0     0.000000
+   97    0.485          2     0.005376
+   98    0.490          1     0.002688
+   99    0.495          0     0.000000
+  100    0.500        312     0.838710
+  101    0.505          0     0.000000
+  102    0.510          0     0.000000
+  103    0.515          0     0.000000
+  104    0.520          0     0.000000
+  105    0.525          0     0.000000
+  106    0.530          0     0.000000
+  107    0.535          0     0.000000
+  108    0.540          0     0.000000
+  109    0.545          0     0.000000
+  110    0.550          0     0.000000
+  111    0.555          0     0.000000
+  112    0.560          0     0.000000
+  113    0.565          0     0.000000
+  114    0.570          0     0.000000
+  115    0.575          0     0.000000
+  116    0.580          0     0.000000
+  117    0.585          0     0.000000
+  118    0.590          0     0.000000
+  119    0.595          0     0.000000
+  120    0.600          0     0.000000
+  121    0.605          0     0.000000
+  122    0.610          0     0.000000
+  123    0.615          0     0.000000
+  124    0.620          0     0.000000
+  125    0.625          0     0.000000
+  126    0.630          0     0.000000
+  127    0.635          0     0.000000
+  128    0.640          0     0.000000
+  129    0.645          0     0.000000
+  130    0.650          0     0.000000
+  131    0.655          0     0.000000
+  132    0.660          0     0.000000
+  133    0.665          0     0.000000
+  134    0.670          0     0.000000
+  135    0.675          0     0.000000
+  136    0.680          0     0.000000
+  137    0.685          0     0.000000
+  138    0.690          0     0.000000
+  139    0.695          0     0.000000
+  140    0.700          0     0.000000
+  141    0.705          0     0.000000
+  142    0.710          0     0.000000
+  143    0.715          0     0.000000
+  144    0.720          0     0.000000
+  145    0.725          0     0.000000
+  146    0.730          0     0.000000
+  147    0.735          0     0.000000
+  148    0.740          0     0.000000
+  149    0.745          0     0.000000
+  150    0.750          0     0.000000
+  151    0.755          0     0.000000
+  152    0.760          0     0.000000
+  153    0.765          0     0.000000
+  154    0.770          0     0.000000
+  155    0.775          0     0.000000
+  156    0.780          0     0.000000
+  157    0.785          0     0.000000
+  158    0.790          0     0.000000
+  159    0.795          0     0.000000
+  160    0.800          0     0.000000
+  161    0.805          0     0.000000
+  162    0.810          0     0.000000
+  163    0.815          0     0.000000
+  164    0.820          0     0.000000
+  165    0.825          0     0.000000
+  166    0.830          0     0.000000
+  167    0.835          0     0.000000
+  168    0.840          0     0.000000
+  169    0.845          0     0.000000
+  170    0.850          0     0.000000
+  171    0.855          0     0.000000
+  172    0.860          0     0.000000
+  173    0.865          0     0.000000
+  174    0.870          0     0.000000
+  175    0.875          0     0.000000
+  176    0.880          0     0.000000
+  177    0.885          0     0.000000
+  178    0.890          0     0.000000
+  179    0.895          0     0.000000
+  180    0.900          0     0.000000
+  181    0.905          0     0.000000
+  182    0.910          0     0.000000
+  183    0.915          0     0.000000
+  184    0.920          0     0.000000
+  185    0.925          0     0.000000
+  186    0.930          0     0.000000
+  187    0.935          0     0.000000
+  188    0.940          0     0.000000
+  189    0.945          0     0.000000
+  190    0.950          0     0.000000
+  191    0.955          0     0.000000
+  192    0.960          0     0.000000
+  193    0.965          0     0.000000
+  194    0.970          0     0.000000
+  195    0.975          0     0.000000
+  196    0.980          0     0.000000
+  197    0.985          0     0.000000
+  198    0.990          0     0.000000
+  199    0.995          0     0.000000
+----------------------------------------
+Total                 372     1.000000
+
+Saved CSFS to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy
++ echo 'Step 3: plotting CSFS'
+Step 3: plotting CSFS
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/plot_csfs.py --csfs /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy --out /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf --title 'CSFS: Africa conditioned on Neanderthal' --label 'Africa | Neanderthal derived'
+Loaded CSFS: 199 bins, 372 total SNPs, n_chrom=200
+Saved plot to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf
++ echo 'Done. Output files:'
+Done. Output files:
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy   — filtered genotype array (SNPs x individuals)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy   — filtered genotype array (SNPs x individuals)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy    — true introgression matrix (SNPs x haplotypes)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy    — true introgression matrix (SNPs x haplotypes)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy       — CSFS vector (length n_chrom-1)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy       — CSFS vector (length n_chrom-1)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf       — CSFS histogram'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf       — CSFS histogram
