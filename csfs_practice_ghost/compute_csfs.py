@@ -1,17 +1,5 @@
 """
-Compute the Conditional Site Frequency Spectrum (CSFS) as defined in
-Durvasula & Sankararaman 2020 (Sci. Adv. 6, eaax5097).
-
-Definition (from paper, Materials & Methods):
-    CSFS_{pop1, pop2}[k] = number of SNPs at which the derived allele
-    is present on k chromosomes in a sample of n total chromosomes in
-    pop1 (Africans), while a single randomly sampled chromosome from
-    the archaic outgroup pop2 (Neanderthal) carries the derived allele.
-
-    k ranges over {1, 2, ..., n-1}  (excludes fixed sites).
-
-Under a neutral model with no admixture, the CSFS is expected to be
-uniform. Deviation (U-shape) is evidence of ghost archaic introgression.
+Compute the Conditional Site Frequency Spectrum (CSFS) 
 
 Input
 -----
