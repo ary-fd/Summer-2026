@@ -53,18 +53,19 @@ def _infer_n_african(kept_individuals):
 
 def _derived_dosage(dosage_row, ancestral, ref, alt):
     """
-    Convert alt-dosage row to derived-allele dosage row.
-
-    If alt is derived: derived_dosage = dosage (0/1/2).
-    If ref is derived: derived_dosage = 2 - dosage.
+    Convert haploid alt-dosage row to derived-allele dosage row.
+    
+    Haploid encoding: 0 = ancestral allele, 1 = alt allele, -1 = missing.
+    If alt is derived: derived_dosage = dosage as-is.
+    If ref is derived: derived_dosage = 1 - dosage (flip 0 and 1).
     Missing (-1) stays -1.
     """
     if ancestral == ref:
-        # alt is derived — dosage already counts alt copies
+        # alt is derived — dosage already counts derived copies
         return dosage_row.copy()
     else:
-        # ref is derived — flip: 0→2, 1→1, 2→0, missing stays -1
-        out = np.where(dosage_row == -1, -1, 2 - dosage_row)
+        # ref is derived — flip: 0→1, 1→0, missing stays -1
+        out = np.where(dosage_row == -1, -1, 1 - dosage_row)
         return out.astype(np.int8)
 
 
@@ -132,7 +133,7 @@ def compute_csfs(
         n_african = _infer_n_african(kept_individuals)
 
     n_neanderthal = len(kept_individuals) - n_african
-    n_chrom_max   = 2 * n_african
+    n_chrom_max   = n_african
 
     if min_african_chrom is None:
         min_african_chrom = n_chrom_max  # require no missing data by default
@@ -190,7 +191,7 @@ def compute_csfs(
         # count of non-missing chromosomes = 2 * non-missing individuals
         # (EIGENSTRAT dosage is per-individual, not per-chromosome)
         n_nonmiss_inds = np.sum(afr_flat != -1)
-        n_chrom_this   = 2 * n_nonmiss_inds
+        n_chrom_this = n_nonmiss_inds  # not 2 * n_nonmiss_inds
 
         if n_chrom_this < min_african_chrom:
             continue

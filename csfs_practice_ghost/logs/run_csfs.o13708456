@@ -1,0 +1,278 @@
++ cd /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /u/project/sriram/aryadini/miniforge3/bin/conda
++++ dirname /u/project/sriram/aryadini/miniforge3/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/condabin:/work/13708456.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ conda activate msprime_env
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate msprime_env
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate msprime_env
+++ '[' -n '' ']'
+++ /u/project/sriram/aryadini/miniforge3/bin/conda shell.posix activate msprime_env
++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708456.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708456.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ PS1='(msprime_env) '
+++ export PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708456.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13708456.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=msprime_env
+++ CONDA_DEFAULT_ENV=msprime_env
+++ export 'CONDA_PROMPT_MODIFIER=(msprime_env) '
+++ CONDA_PROMPT_MODIFIER='(msprime_env) '
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh
++++ export GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ export GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
++++ GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ for pre in '${rem}'
++++ test '' = /u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ conda_catalog_files=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ EIGENSTRAT=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat
++ SCRIPTS=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ OUT=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
++ TAG=ghost_sim
++ POP=Africa
++ INTROGRESS=Ghost
++ NEANDERTHAL=Neanderthal
++ AFR_GENO=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno
++ AFR_SNP=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp
++ AFR_IND=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind
++ NEA_GENO=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno
++ NEA_SNP=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp
++ NEA_IND=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind
++ ANC=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc
++ echo 'Step 1: filtering derived alleles shared between Africa and Neanderthal'
+Step 1: filtering derived alleles shared between Africa and Neanderthal
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filter_derived_alleles.py --african-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno --african-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp --african-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind --neanderthal-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno --neanderthal-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp --neanderthal-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind --anc /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc --save-npy /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered
+Reading African files ...
+  100 African individuals, 120634 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 120634 SNPs
+Reading .anc file ...
+Filtering SNPs ...
+  SNPs passing filter: 36760 / 120634
+
+geno_array shape : (36760, 102)  (SNPs × individuals)
+dtype            : int8
+anc_matrix shape : (36760, 100)  (SNPs × African haplotypes)
+Saved geno_array to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy
+Saved anc_matrix to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy
++ echo 'Step 2: computing CSFS'
+Step 2: computing CSFS
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/compute_csfs.py --african-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.geno --african-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.snp --african-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfrica.ind --neanderthal-geno /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.geno --neanderthal-snp /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.snp --neanderthal-ind /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simNeanderthal.ind --anc /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/eigenstrat/ghost_simAfricaGhost.anc --save-npy /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs
+Reading African files ...
+  100 African individuals, 120634 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 120634 SNPs
+Reading .anc file ...
+Filtering SNPs ...
+  SNPs passing filter: 36760 / 120634
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 3911)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         52     0.013296
+    2    0.020         35     0.008949
+    3    0.030         49     0.012529
+    4    0.040         54     0.013807
+    5    0.050         24     0.006137
+    6    0.060         32     0.008182
+    7    0.070         21     0.005369
+    8    0.080         36     0.009205
+    9    0.090         30     0.007671
+   10    0.100         39     0.009972
+   11    0.110         37     0.009460
+   12    0.120         45     0.011506
+   13    0.130         42     0.010739
+   14    0.140         33     0.008438
+   15    0.150         36     0.009205
+   16    0.160         33     0.008438
+   17    0.170         39     0.009972
+   18    0.180         24     0.006137
+   19    0.190         30     0.007671
+   20    0.200         35     0.008949
+   21    0.210         37     0.009460
+   22    0.220         28     0.007159
+   23    0.230         29     0.007415
+   24    0.240         22     0.005625
+   25    0.250         24     0.006137
+   26    0.260         28     0.007159
+   27    0.270         28     0.007159
+   28    0.280         25     0.006392
+   29    0.290         21     0.005369
+   30    0.300         28     0.007159
+   31    0.310         42     0.010739
+   32    0.320         24     0.006137
+   33    0.330         24     0.006137
+   34    0.340         24     0.006137
+   35    0.350         26     0.006648
+   36    0.360         28     0.007159
+   37    0.370         25     0.006392
+   38    0.380         35     0.008949
+   39    0.390         28     0.007159
+   40    0.400         26     0.006648
+   41    0.410         32     0.008182
+   42    0.420         33     0.008438
+   43    0.430         41     0.010483
+   44    0.440         23     0.005881
+   45    0.450          9     0.002301
+   46    0.460         21     0.005369
+   47    0.470         27     0.006904
+   48    0.480         25     0.006392
+   49    0.490         23     0.005881
+   50    0.500         34     0.008693
+   51    0.510         22     0.005625
+   52    0.520         22     0.005625
+   53    0.530         13     0.003324
+   54    0.540         23     0.005881
+   55    0.550         42     0.010739
+   56    0.560         27     0.006904
+   57    0.570         36     0.009205
+   58    0.580         34     0.008693
+   59    0.590         27     0.006904
+   60    0.600         35     0.008949
+   61    0.610         31     0.007926
+   62    0.620         40     0.010228
+   63    0.630         45     0.011506
+   64    0.640         38     0.009716
+   65    0.650         25     0.006392
+   66    0.660         38     0.009716
+   67    0.670         29     0.007415
+   68    0.680         33     0.008438
+   69    0.690         25     0.006392
+   70    0.700         43     0.010995
+   71    0.710         50     0.012784
+   72    0.720         27     0.006904
+   73    0.730         44     0.011250
+   74    0.740         38     0.009716
+   75    0.750         53     0.013552
+   76    0.760         52     0.013296
+   77    0.770         55     0.014063
+   78    0.780         44     0.011250
+   79    0.790         49     0.012529
+   80    0.800         44     0.011250
+   81    0.810         37     0.009460
+   82    0.820         28     0.007159
+   83    0.830         41     0.010483
+   84    0.840         37     0.009460
+   85    0.850         52     0.013296
+   86    0.860         74     0.018921
+   87    0.870         69     0.017643
+   88    0.880         84     0.021478
+   89    0.890         61     0.015597
+   90    0.900         48     0.012273
+   91    0.910         56     0.014319
+   92    0.920         67     0.017131
+   93    0.930         76     0.019432
+   94    0.940         80     0.020455
+   95    0.950         90     0.023012
+   96    0.960        113     0.028893
+   97    0.970         78     0.019944
+   98    0.980         99     0.025313
+   99    0.990         91     0.023268
+----------------------------------------
+Total                3911     1.000000
+
+Saved CSFS to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy
++ echo 'Step 3: plotting CSFS'
+Step 3: plotting CSFS
++ python /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/plot_csfs.py --csfs /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy --out /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf --title 'CSFS: Africa conditioned on Neanderthal' --label 'Africa | Neanderthal derived'
+Loaded CSFS: 99 bins, 3911 total SNPs, n_chrom=100
+Saved plot to /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf
++ echo 'Done. Output files:'
+Done. Output files:
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy   — filtered genotype array (SNPs x individuals)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_geno.npy   — filtered genotype array (SNPs x individuals)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy    — true introgression matrix (SNPs x haplotypes)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/filtered_anc.npy    — true introgression matrix (SNPs x haplotypes)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy       — CSFS vector (length n_chrom-1)'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_csfs.npy       — CSFS vector (length n_chrom-1)
++ echo '  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf       — CSFS histogram'
+  /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/csfs_plot.pdf       — CSFS histogram

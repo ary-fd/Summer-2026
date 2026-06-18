@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -j y
-#$ -N practice_msprime
+#$ -N msprime_ghost
 #$ -l h_data=8G,h_rt=03:00:00
 #$ -o /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/logs/$JOB_NAME.o$JOB_ID
 set -x
@@ -16,7 +16,7 @@ reference=Chimp
 target=Africa
 model=ghost_sim
 json=ghost_sim
-nsite=100000
+nsite=10000000
 rep=1
 dir=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
 
