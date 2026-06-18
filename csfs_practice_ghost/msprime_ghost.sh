@@ -14,14 +14,14 @@ pop=Africa
 introgress=Ghost
 reference=Chimp
 target=Africa
-model=practice
-json=sample
+model=ghost_sim
+json=ghost_sim
 nsite=100000
 rep=1
-dir=/u/scratch/a/aryadini/msprime_practice
+dir=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
 
 echo "Starting simulation"
-python ${dir}/archiesim.py \
+python ${dir}/archiesim_ghost.py \
     -r $rep \
     -t $model \
     -d ${dir}/${model}.yaml \

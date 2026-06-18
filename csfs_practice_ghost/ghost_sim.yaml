@@ -10,23 +10,19 @@ demes:
   start_time: 300000
   ancestors: [Chimp]
   epochs:
-  - {end_time: 6200, start_size: 10000}
-  - {end_time: 6000, start_size: 100.0}
-  - {end_time: 20000, start_size: 10000.0}
+  - {end_time: 20000, start_size: 10000}
 
 - name: Ghost
+  start_time: 31250
   ancestors: [Ancestral]
-  start_time: 31250   # diverged before human/Neanderthal split (~625kya / 20yr gen)
   epochs:
-  - {end_time: 0, start_size: 25000}  # large Ne as estimated in paper
+  - {end_time: 0, start_size: 25000}
 
 - name: Neanderthal
   start_time: 20000
   ancestors: [Ancestral]
   epochs:
-  - {end_time: 6200, start_size: 10000}
-  - {end_time: 6000, start_size: 100.0}
-  - {end_time: 2000, start_size: 10000.0}
+  - {end_time: 2000, start_size: 10000}
 
 - name: Africa
   start_time: 20000
@@ -37,5 +33,5 @@ demes:
 pulses:
 - sources: [Ghost]
   dest: Africa
-  time: 2150   # ~43kya as estimated in paper
-  proportions: [0.11]  # posterior mean admixture fraction from paper
+  time: 2150
+  proportions: [0.11]
