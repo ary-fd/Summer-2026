@@ -179,6 +179,7 @@ def main(args):
     write_eigenstrat(args.tag,args.population,ts, args.nsites)
     write_eigenstrat(args.tag,args.reference,ts, args.nsites)
     write_eigenstrat(args.tag,args.introgression,ts, args.nsites)
+    write_eigenstrat(args.tag, "Neanderthal", ts, args.nsites)
     if args.target==None:
         true_de_segs = get_true_introgressed_segments(args.tag,ts,args.population,args.introgression)
         write_true_introgressed_segs(args.tag,ts,args.population,args.introgression,true_de_segs)

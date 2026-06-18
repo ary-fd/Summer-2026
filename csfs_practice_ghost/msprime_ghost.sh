@@ -2,8 +2,8 @@
 #$ -cwd
 #$ -j y
 #$ -N practice_msprime
-#$ -l h_data=1G,h_rt=03:00:00
-#$ -o /u/scratch/a/aryadini/csfs_practice_ghost/logs/$JOB_NAME.o$JOB_ID
+#$ -l h_data=8G,h_rt=03:00:00
+#$ -o /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/logs/$JOB_NAME.o$JOB_ID
 set -x
 
 cd /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
