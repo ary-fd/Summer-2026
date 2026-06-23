@@ -1,0 +1,37 @@
+time_units: generations
+generation_time: 1
+
+demes:
+- name: Chimp
+  epochs:
+  - {end_time: 0, start_size: 10000}
+
+- name: Ancestral
+  start_time: 300000
+  ancestors: [Chimp]
+  epochs:
+  - {end_time: 20000, start_size: 10000}
+
+- name: Ghost
+  start_time: 31250
+  ancestors: [Ancestral]
+  epochs:
+  - {end_time: 0, start_size: 25000}
+
+- name: Neanderthal
+  start_time: 20000
+  ancestors: [Ancestral]
+  epochs:
+  - {end_time: 2000, start_size: 10000}
+
+- name: Africa
+  start_time: 20000
+  ancestors: [Ancestral]
+  epochs:
+  - {end_time: 0, start_size: 10000}
+
+pulses:
+- sources: [Ghost]
+  dest: Africa
+  time: 2150
+  proportions: [0.11]

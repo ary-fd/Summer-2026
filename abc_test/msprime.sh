@@ -2,11 +2,11 @@
 #$ -cwd
 #$ -j y
 #$ -N msprime_ghost
-#$ -l h_data=8G,h_rt=03:00:00
-#$ -o /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost/logs/$JOB_NAME.o$JOB_ID
+#$ -l h_data=32G,h_rt=03:00:00
+#$ -o /u/scratch/a/aryadini/Summer-2026/abc_test/logs/$JOB_NAME.o$JOB_ID
 set -x
 
-cd /u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
+cd /u/scratch/a/aryadini/Summer-2026/abc_test
 source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
 conda activate msprime_env
 
@@ -17,11 +17,11 @@ target=Africa
 model=ghost_sim
 json=ghost_sim
 nsite=10000000
-rep=2
-dir=/u/scratch/a/aryadini/Summer-2026/csfs_practice_ghost
+rep=5
+dir=/u/scratch/a/aryadini/Summer-2026/abc_test
 
 echo "Starting simulation"
-python ${dir}/archiesim_ghost.py \
+python ${dir}/archiesim.py \
     -r $rep \
     -t $model \
     -d ${dir}/${model}.yaml \

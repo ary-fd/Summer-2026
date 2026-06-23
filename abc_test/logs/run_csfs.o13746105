@@ -1,0 +1,703 @@
++ cd /u/scratch/a/aryadini/Summer-2026/abc_test
++ source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /u/project/sriram/aryadini/miniforge3/bin/conda
++++ dirname /u/project/sriram/aryadini/miniforge3/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/condabin:/work/13746105.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ conda activate msprime_env
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate msprime_env
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate msprime_env
+++ '[' -n '' ']'
+++ /u/project/sriram/aryadini/miniforge3/bin/conda shell.posix activate msprime_env
++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13746105.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(msprime_env) '\''
+export PATH='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13746105.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin'\''
+export CONDA_PREFIX='\''/u/project/sriram/aryadini/miniforge3/envs/msprime_env'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''msprime_env'\''
+export CONDA_PROMPT_MODIFIER='\''(msprime_env) '\''
+export CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export _CONDA_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/u/project/sriram/aryadini/miniforge3/bin/python'\''
+export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh"
+. "/u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh"'
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ PS1='(msprime_env) '
+++ export PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13746105.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ PATH=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/bin:/u/project/sriram/aryadini/miniforge3/condabin:/work/13746105.1.pod_smp.q:/usr/local/bin:/bin:/usr/bin
+++ export CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ CONDA_PREFIX=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=msprime_env
+++ CONDA_DEFAULT_ENV=msprime_env
+++ export 'CONDA_PROMPT_MODIFIER=(msprime_env) '
+++ CONDA_PROMPT_MODIFIER='(msprime_env) '
+++ export CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ _CONDA_EXE=/u/project/sriram/aryadini/miniforge3/bin/conda
+++ export CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ CONDA_PYTHON_EXE=/u/project/sriram/aryadini/miniforge3/bin/python
+++ export _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ _CONDA_ROOT=/u/project/sriram/aryadini/miniforge3
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libglib_activate.sh
++++ export GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ export GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
++++ GSETTINGS_SCHEMA_DIR=/u/project/sriram/aryadini/miniforge3/envs/msprime_env/share/glib-2.0/schemas
+++ . /u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/conda/activate.d/libxml2-split_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ for pre in '${rem}'
++++ test '' = /u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ conda_catalog_files=/u/project/sriram/aryadini/miniforge3/envs/msprime_env
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///u/project/sriram/aryadini/miniforge3/envs/msprime_env/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ for rep in 0 1 2 3 4
++ python compute_csfs.py --african-geno eigenstrat/ghost_sim_rep0Africa.geno --african-snp eigenstrat/ghost_sim_rep0Africa.snp --african-ind eigenstrat/ghost_sim_rep0Africa.ind --neanderthal-geno eigenstrat/ghost_sim_rep0Neanderthal.geno --neanderthal-snp eigenstrat/ghost_sim_rep0Neanderthal.snp --neanderthal-ind eigenstrat/ghost_sim_rep0Neanderthal.ind --save-npy csfs/rep0
+Reading African files ...
+  100 African individuals, 122483 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 122483 SNPs
+Filtering SNPs ...
+  SNPs passing filter: 37181 / 122483
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 3977)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         41     0.010309
+    2    0.020         44     0.011064
+    3    0.030         33     0.008298
+    4    0.040         27     0.006789
+    5    0.050         23     0.005783
+    6    0.060         53     0.013327
+    7    0.070         44     0.011064
+    8    0.080         38     0.009555
+    9    0.090         43     0.010812
+   10    0.100         30     0.007543
+   11    0.110         42     0.010561
+   12    0.120         25     0.006286
+   13    0.130         34     0.008549
+   14    0.140         32     0.008046
+   15    0.150         31     0.007795
+   16    0.160         31     0.007795
+   17    0.170         32     0.008046
+   18    0.180         36     0.009052
+   19    0.190         29     0.007292
+   20    0.200         36     0.009052
+   21    0.210         21     0.005280
+   22    0.220         27     0.006789
+   23    0.230         32     0.008046
+   24    0.240         30     0.007543
+   25    0.250         24     0.006035
+   26    0.260         16     0.004023
+   27    0.270         26     0.006538
+   28    0.280         25     0.006286
+   29    0.290         25     0.006286
+   30    0.300         24     0.006035
+   31    0.310         12     0.003017
+   32    0.320         27     0.006789
+   33    0.330         24     0.006035
+   34    0.340         20     0.005029
+   35    0.350         24     0.006035
+   36    0.360         30     0.007543
+   37    0.370         25     0.006286
+   38    0.380         25     0.006286
+   39    0.390         30     0.007543
+   40    0.400         31     0.007795
+   41    0.410         29     0.007292
+   42    0.420         25     0.006286
+   43    0.430         28     0.007040
+   44    0.440         19     0.004777
+   45    0.450         28     0.007040
+   46    0.460         24     0.006035
+   47    0.470         48     0.012069
+   48    0.480         28     0.007040
+   49    0.490         21     0.005280
+   50    0.500         25     0.006286
+   51    0.510         35     0.008801
+   52    0.520         29     0.007292
+   53    0.530         32     0.008046
+   54    0.540         55     0.013830
+   55    0.550         30     0.007543
+   56    0.560         32     0.008046
+   57    0.570         30     0.007543
+   58    0.580         36     0.009052
+   59    0.590         30     0.007543
+   60    0.600         32     0.008046
+   61    0.610         21     0.005280
+   62    0.620         26     0.006538
+   63    0.630         34     0.008549
+   64    0.640         47     0.011818
+   65    0.650         35     0.008801
+   66    0.660         30     0.007543
+   67    0.670         42     0.010561
+   68    0.680         37     0.009303
+   69    0.690         23     0.005783
+   70    0.700         29     0.007292
+   71    0.710         26     0.006538
+   72    0.720         39     0.009806
+   73    0.730         24     0.006035
+   74    0.740         33     0.008298
+   75    0.750         41     0.010309
+   76    0.760         50     0.012572
+   77    0.770         45     0.011315
+   78    0.780         54     0.013578
+   79    0.790         34     0.008549
+   80    0.800         56     0.014081
+   81    0.810         63     0.015841
+   82    0.820         47     0.011818
+   83    0.830         57     0.014332
+   84    0.840         58     0.014584
+   85    0.850         59     0.014835
+   86    0.860         58     0.014584
+   87    0.870         39     0.009806
+   88    0.880         53     0.013327
+   89    0.890         39     0.009806
+   90    0.900         72     0.018104
+   91    0.910         77     0.019361
+   92    0.920         66     0.016595
+   93    0.930         71     0.017853
+   94    0.940         81     0.020367
+   95    0.950         89     0.022379
+   96    0.960         64     0.016093
+   97    0.970        122     0.030676
+   98    0.980        172     0.043249
+   99    0.990        146     0.036711
+----------------------------------------
+Total                3977     1.000000
+
+Saved CSFS to csfs/rep0_csfs.npy
++ for rep in 0 1 2 3 4
++ python compute_csfs.py --african-geno eigenstrat/ghost_sim_rep1Africa.geno --african-snp eigenstrat/ghost_sim_rep1Africa.snp --african-ind eigenstrat/ghost_sim_rep1Africa.ind --neanderthal-geno eigenstrat/ghost_sim_rep1Neanderthal.geno --neanderthal-snp eigenstrat/ghost_sim_rep1Neanderthal.snp --neanderthal-ind eigenstrat/ghost_sim_rep1Neanderthal.ind --save-npy csfs/rep1
+Reading African files ...
+  100 African individuals, 120848 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 120848 SNPs
+Filtering SNPs ...
+  SNPs passing filter: 36523 / 120848
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 3768)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         79     0.020966
+    2    0.020         32     0.008493
+    3    0.030         22     0.005839
+    4    0.040         53     0.014066
+    5    0.050         25     0.006635
+    6    0.060         37     0.009820
+    7    0.070         38     0.010085
+    8    0.080         26     0.006900
+    9    0.090         46     0.012208
+   10    0.100         38     0.010085
+   11    0.110         29     0.007696
+   12    0.120         20     0.005308
+   13    0.130         32     0.008493
+   14    0.140         28     0.007431
+   15    0.150         35     0.009289
+   16    0.160         31     0.008227
+   17    0.170         23     0.006104
+   18    0.180         33     0.008758
+   19    0.190         33     0.008758
+   20    0.200         28     0.007431
+   21    0.210         28     0.007431
+   22    0.220         33     0.008758
+   23    0.230         25     0.006635
+   24    0.240         21     0.005573
+   25    0.250         22     0.005839
+   26    0.260         23     0.006104
+   27    0.270         35     0.009289
+   28    0.280         27     0.007166
+   29    0.290         28     0.007431
+   30    0.300         26     0.006900
+   31    0.310         23     0.006104
+   32    0.320         23     0.006104
+   33    0.330         19     0.005042
+   34    0.340         22     0.005839
+   35    0.350         15     0.003981
+   36    0.360         25     0.006635
+   37    0.370         29     0.007696
+   38    0.380         23     0.006104
+   39    0.390         22     0.005839
+   40    0.400         32     0.008493
+   41    0.410         30     0.007962
+   42    0.420         26     0.006900
+   43    0.430         27     0.007166
+   44    0.440         34     0.009023
+   45    0.450         26     0.006900
+   46    0.460         26     0.006900
+   47    0.470         34     0.009023
+   48    0.480         28     0.007431
+   49    0.490         24     0.006369
+   50    0.500         19     0.005042
+   51    0.510         24     0.006369
+   52    0.520         19     0.005042
+   53    0.530         34     0.009023
+   54    0.540         26     0.006900
+   55    0.550         16     0.004246
+   56    0.560         15     0.003981
+   57    0.570         19     0.005042
+   58    0.580         37     0.009820
+   59    0.590         30     0.007962
+   60    0.600         26     0.006900
+   61    0.610         30     0.007962
+   62    0.620         17     0.004512
+   63    0.630         17     0.004512
+   64    0.640         25     0.006635
+   65    0.650         33     0.008758
+   66    0.660         19     0.005042
+   67    0.670         18     0.004777
+   68    0.680         43     0.011412
+   69    0.690         31     0.008227
+   70    0.700         35     0.009289
+   71    0.710         21     0.005573
+   72    0.720         33     0.008758
+   73    0.730         34     0.009023
+   74    0.740         37     0.009820
+   75    0.750         31     0.008227
+   76    0.760         28     0.007431
+   77    0.770         31     0.008227
+   78    0.780         31     0.008227
+   79    0.790         21     0.005573
+   80    0.800         27     0.007166
+   81    0.810         34     0.009023
+   82    0.820         53     0.014066
+   83    0.830         42     0.011146
+   84    0.840         42     0.011146
+   85    0.850         53     0.014066
+   86    0.860         50     0.013270
+   87    0.870         53     0.014066
+   88    0.880         44     0.011677
+   89    0.890         63     0.016720
+   90    0.900         64     0.016985
+   91    0.910         84     0.022293
+   92    0.920        116     0.030786
+   93    0.930        117     0.031051
+   94    0.940         94     0.024947
+   95    0.950         87     0.023089
+   96    0.960        102     0.027070
+   97    0.970         97     0.025743
+   98    0.980        147     0.039013
+   99    0.990        155     0.041136
+----------------------------------------
+Total                3768     1.000000
+
+Saved CSFS to csfs/rep1_csfs.npy
++ for rep in 0 1 2 3 4
++ python compute_csfs.py --african-geno eigenstrat/ghost_sim_rep2Africa.geno --african-snp eigenstrat/ghost_sim_rep2Africa.snp --african-ind eigenstrat/ghost_sim_rep2Africa.ind --neanderthal-geno eigenstrat/ghost_sim_rep2Neanderthal.geno --neanderthal-snp eigenstrat/ghost_sim_rep2Neanderthal.snp --neanderthal-ind eigenstrat/ghost_sim_rep2Neanderthal.ind --save-npy csfs/rep2
+Reading African files ...
+  100 African individuals, 121997 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 121997 SNPs
+Filtering SNPs ...
+  SNPs passing filter: 37004 / 121997
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 4001)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         56     0.013997
+    2    0.020         54     0.013497
+    3    0.030         66     0.016496
+    4    0.040         52     0.012997
+    5    0.050         63     0.015746
+    6    0.060         42     0.010497
+    7    0.070         39     0.009748
+    8    0.080         40     0.009998
+    9    0.090         38     0.009498
+   10    0.100         42     0.010497
+   11    0.110         48     0.011997
+   12    0.120         47     0.011747
+   13    0.130         39     0.009748
+   14    0.140         28     0.006998
+   15    0.150         30     0.007498
+   16    0.160         36     0.008998
+   17    0.170         28     0.006998
+   18    0.180         36     0.008998
+   19    0.190         36     0.008998
+   20    0.200         30     0.007498
+   21    0.210         32     0.007998
+   22    0.220         27     0.006748
+   23    0.230         30     0.007498
+   24    0.240         27     0.006748
+   25    0.250         35     0.008748
+   26    0.260         20     0.004999
+   27    0.270         17     0.004249
+   28    0.280         13     0.003249
+   29    0.290         22     0.005499
+   30    0.300         18     0.004499
+   31    0.310         33     0.008248
+   32    0.320         22     0.005499
+   33    0.330         15     0.003749
+   34    0.340         26     0.006498
+   35    0.350         20     0.004999
+   36    0.360         21     0.005249
+   37    0.370         26     0.006498
+   38    0.380         27     0.006748
+   39    0.390         36     0.008998
+   40    0.400         14     0.003499
+   41    0.410         16     0.003999
+   42    0.420         22     0.005499
+   43    0.430         26     0.006498
+   44    0.440         21     0.005249
+   45    0.450         16     0.003999
+   46    0.460         20     0.004999
+   47    0.470         28     0.006998
+   48    0.480         28     0.006998
+   49    0.490         27     0.006748
+   50    0.500         22     0.005499
+   51    0.510         19     0.004749
+   52    0.520         29     0.007248
+   53    0.530         35     0.008748
+   54    0.540         19     0.004749
+   55    0.550         25     0.006248
+   56    0.560         29     0.007248
+   57    0.570         23     0.005749
+   58    0.580         28     0.006998
+   59    0.590         21     0.005249
+   60    0.600         15     0.003749
+   61    0.610         26     0.006498
+   62    0.620         27     0.006748
+   63    0.630         14     0.003499
+   64    0.640         23     0.005749
+   65    0.650         22     0.005499
+   66    0.660         21     0.005249
+   67    0.670         24     0.005999
+   68    0.680         33     0.008248
+   69    0.690         24     0.005999
+   70    0.700         34     0.008498
+   71    0.710         16     0.003999
+   72    0.720         43     0.010747
+   73    0.730         43     0.010747
+   74    0.740         25     0.006248
+   75    0.750         44     0.010997
+   76    0.760         47     0.011747
+   77    0.770         39     0.009748
+   78    0.780         42     0.010497
+   79    0.790         52     0.012997
+   80    0.800         34     0.008498
+   81    0.810         54     0.013497
+   82    0.820         44     0.010997
+   83    0.830         32     0.007998
+   84    0.840         66     0.016496
+   85    0.850         61     0.015246
+   86    0.860         67     0.016746
+   87    0.870         74     0.018495
+   88    0.880         71     0.017746
+   89    0.890         73     0.018245
+   90    0.900         81     0.020245
+   91    0.910        108     0.026993
+   92    0.920         96     0.023994
+   93    0.930         89     0.022244
+   94    0.940         68     0.016996
+   95    0.950         79     0.019745
+   96    0.960        134     0.033492
+   97    0.970        127     0.031742
+   98    0.980        103     0.025744
+   99    0.990        141     0.035241
+----------------------------------------
+Total                4001     1.000000
+
+Saved CSFS to csfs/rep2_csfs.npy
++ for rep in 0 1 2 3 4
++ python compute_csfs.py --african-geno eigenstrat/ghost_sim_rep3Africa.geno --african-snp eigenstrat/ghost_sim_rep3Africa.snp --african-ind eigenstrat/ghost_sim_rep3Africa.ind --neanderthal-geno eigenstrat/ghost_sim_rep3Neanderthal.geno --neanderthal-snp eigenstrat/ghost_sim_rep3Neanderthal.snp --neanderthal-ind eigenstrat/ghost_sim_rep3Neanderthal.ind --save-npy csfs/rep3
+Reading African files ...
+  100 African individuals, 120406 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 120406 SNPs
+Filtering SNPs ...
+  SNPs passing filter: 36517 / 120406
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 3603)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         40     0.011102
+    2    0.020         32     0.008881
+    3    0.030         43     0.011934
+    4    0.040         61     0.016930
+    5    0.050         25     0.006939
+    6    0.060         33     0.009159
+    7    0.070         36     0.009992
+    8    0.080         21     0.005828
+    9    0.090         32     0.008881
+   10    0.100         29     0.008049
+   11    0.110         42     0.011657
+   12    0.120         28     0.007771
+   13    0.130         19     0.005273
+   14    0.140         29     0.008049
+   15    0.150         42     0.011657
+   16    0.160         19     0.005273
+   17    0.170         43     0.011934
+   18    0.180         28     0.007771
+   19    0.190         35     0.009714
+   20    0.200         32     0.008881
+   21    0.210         23     0.006384
+   22    0.220         35     0.009714
+   23    0.230         29     0.008049
+   24    0.240         26     0.007216
+   25    0.250         50     0.013877
+   26    0.260         22     0.006106
+   27    0.270         23     0.006384
+   28    0.280         27     0.007494
+   29    0.290         25     0.006939
+   30    0.300         31     0.008604
+   31    0.310         19     0.005273
+   32    0.320         21     0.005828
+   33    0.330         16     0.004441
+   34    0.340         17     0.004718
+   35    0.350         27     0.007494
+   36    0.360         27     0.007494
+   37    0.370         17     0.004718
+   38    0.380         21     0.005828
+   39    0.390         25     0.006939
+   40    0.400         25     0.006939
+   41    0.410          9     0.002498
+   42    0.420         23     0.006384
+   43    0.430         29     0.008049
+   44    0.440         18     0.004996
+   45    0.450         24     0.006661
+   46    0.460         20     0.005551
+   47    0.470         20     0.005551
+   48    0.480         27     0.007494
+   49    0.490         23     0.006384
+   50    0.500         20     0.005551
+   51    0.510         20     0.005551
+   52    0.520         26     0.007216
+   53    0.530         25     0.006939
+   54    0.540         14     0.003886
+   55    0.550         21     0.005828
+   56    0.560         26     0.007216
+   57    0.570         20     0.005551
+   58    0.580         17     0.004718
+   59    0.590         29     0.008049
+   60    0.600         18     0.004996
+   61    0.610         27     0.007494
+   62    0.620         27     0.007494
+   63    0.630         24     0.006661
+   64    0.640         27     0.007494
+   65    0.650         38     0.010547
+   66    0.660         44     0.012212
+   67    0.670         31     0.008604
+   68    0.680         34     0.009437
+   69    0.690         37     0.010269
+   70    0.700         39     0.010824
+   71    0.710         20     0.005551
+   72    0.720         27     0.007494
+   73    0.730         45     0.012490
+   74    0.740         53     0.014710
+   75    0.750         48     0.013322
+   76    0.760         39     0.010824
+   77    0.770         38     0.010547
+   78    0.780         56     0.015543
+   79    0.790         39     0.010824
+   80    0.800         58     0.016098
+   81    0.810         42     0.011657
+   82    0.820         47     0.013045
+   83    0.830         45     0.012490
+   84    0.840         53     0.014710
+   85    0.850         45     0.012490
+   86    0.860         51     0.014155
+   87    0.870         49     0.013600
+   88    0.880         77     0.021371
+   89    0.890         42     0.011657
+   90    0.900         74     0.020538
+   91    0.910         51     0.014155
+   92    0.920         70     0.019428
+   93    0.930         92     0.025534
+   94    0.940         84     0.023314
+   95    0.950         70     0.019428
+   96    0.960        114     0.031640
+   97    0.970        105     0.029142
+   98    0.980         80     0.022204
+   99    0.990         57     0.015820
+----------------------------------------
+Total                3603     1.000000
+
+Saved CSFS to csfs/rep3_csfs.npy
++ for rep in 0 1 2 3 4
++ python compute_csfs.py --african-geno eigenstrat/ghost_sim_rep4Africa.geno --african-snp eigenstrat/ghost_sim_rep4Africa.snp --african-ind eigenstrat/ghost_sim_rep4Africa.ind --neanderthal-geno eigenstrat/ghost_sim_rep4Neanderthal.geno --neanderthal-snp eigenstrat/ghost_sim_rep4Neanderthal.snp --neanderthal-ind eigenstrat/ghost_sim_rep4Neanderthal.ind --save-npy csfs/rep4
+Reading African files ...
+  100 African individuals, 123125 SNPs
+Reading Neanderthal files ...
+  2 Neanderthal individuals, 123125 SNPs
+Filtering SNPs ...
+  SNPs passing filter: 36944 / 123125
+
+Computing CSFS ...
+
+CSFS (n_chrom = 100, total SNPs = 4265)
+
+    k     freq      count   proportion
+----------------------------------------
+    1    0.010         50     0.011723
+    2    0.020         45     0.010551
+    3    0.030         53     0.012427
+    4    0.040         67     0.015709
+    5    0.050         58     0.013599
+    6    0.060         42     0.009848
+    7    0.070         34     0.007972
+    8    0.080         34     0.007972
+    9    0.090         30     0.007034
+   10    0.100         42     0.009848
+   11    0.110         46     0.010785
+   12    0.120         35     0.008206
+   13    0.130         29     0.006800
+   14    0.140         42     0.009848
+   15    0.150         30     0.007034
+   16    0.160         46     0.010785
+   17    0.170         26     0.006096
+   18    0.180         19     0.004455
+   19    0.190         33     0.007737
+   20    0.200         26     0.006096
+   21    0.210         21     0.004924
+   22    0.220         45     0.010551
+   23    0.230         22     0.005158
+   24    0.240         23     0.005393
+   25    0.250         23     0.005393
+   26    0.260         32     0.007503
+   27    0.270         31     0.007268
+   28    0.280         20     0.004689
+   29    0.290         30     0.007034
+   30    0.300         30     0.007034
+   31    0.310         28     0.006565
+   32    0.320         32     0.007503
+   33    0.330         32     0.007503
+   34    0.340         37     0.008675
+   35    0.350         29     0.006800
+   36    0.360         23     0.005393
+   37    0.370         28     0.006565
+   38    0.380         18     0.004220
+   39    0.390         25     0.005862
+   40    0.400         20     0.004689
+   41    0.410         24     0.005627
+   42    0.420         23     0.005393
+   43    0.430         28     0.006565
+   44    0.440         21     0.004924
+   45    0.450         25     0.005862
+   46    0.460         31     0.007268
+   47    0.470         26     0.006096
+   48    0.480         38     0.008910
+   49    0.490         36     0.008441
+   50    0.500         26     0.006096
+   51    0.510         25     0.005862
+   52    0.520         29     0.006800
+   53    0.530         28     0.006565
+   54    0.540         24     0.005627
+   55    0.550         21     0.004924
+   56    0.560         22     0.005158
+   57    0.570         12     0.002814
+   58    0.580         30     0.007034
+   59    0.590         27     0.006331
+   60    0.600         36     0.008441
+   61    0.610         29     0.006800
+   62    0.620         32     0.007503
+   63    0.630         39     0.009144
+   64    0.640         27     0.006331
+   65    0.650         44     0.010317
+   66    0.660         34     0.007972
+   67    0.670         26     0.006096
+   68    0.680         64     0.015006
+   69    0.690         36     0.008441
+   70    0.700         34     0.007972
+   71    0.710         47     0.011020
+   72    0.720         58     0.013599
+   73    0.730         52     0.012192
+   74    0.740         43     0.010082
+   75    0.750         51     0.011958
+   76    0.760         46     0.010785
+   77    0.770         32     0.007503
+   78    0.780         71     0.016647
+   79    0.790         57     0.013365
+   80    0.800         41     0.009613
+   81    0.810         64     0.015006
+   82    0.820         49     0.011489
+   83    0.830         60     0.014068
+   84    0.840         68     0.015944
+   85    0.850         62     0.014537
+   86    0.860         58     0.013599
+   87    0.870         82     0.019226
+   88    0.880         71     0.016647
+   89    0.890         80     0.018757
+   90    0.900         98     0.022978
+   91    0.910         88     0.020633
+   92    0.920         87     0.020399
+   93    0.930        105     0.024619
+   94    0.940        108     0.025322
+   95    0.950         93     0.021805
+   96    0.960         99     0.023212
+   97    0.970        111     0.026026
+   98    0.980         53     0.012427
+   99    0.990         98     0.022978
+----------------------------------------
+Total                4265     1.000000
+
+Saved CSFS to csfs/rep4_csfs.npy
