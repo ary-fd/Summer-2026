@@ -51,6 +51,6 @@ __pycache__/
 *.pkl
 *.pdf
 logs/
-abc_results/
-csfs/
-eigenstrat/
+abc_test/abc_results/
+abc_test/csfs/
+abc_test/eigenstrat/
