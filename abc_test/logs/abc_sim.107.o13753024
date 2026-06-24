@@ -112,3 +112,14 @@ export _CONDA_ROOT='\''/u/project/sriram/aryadini/miniforge3'\''
 + '[' -n '' ']'
 + hash -r
 + python csfs_code/abc_simulate.py --task-id 107 --n-sims 200 --out-dir abc_results
+Task 107: 20/200 complete (62 attempts)
+Task 107: 40/200 complete (147 attempts)
+Task 107: 60/200 complete (223 attempts)
+Task 107: 80/200 complete (292 attempts)
+Task 107: 100/200 complete (364 attempts)
+Task 107: 120/200 complete (447 attempts)
+Task 107: 140/200 complete (534 attempts)
+Task 107: 160/200 complete (632 attempts)
+Task 107: 180/200 complete (701 attempts)
+Task 107: 200/200 complete (793 attempts)
+Task 107: saved 200 simulations (793 attempts total)
