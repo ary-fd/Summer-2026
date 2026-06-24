@@ -9,6 +9,7 @@
 *.vcf
 *.vcf.gz
 *.bcf
+*.npy
 
 #PLINK genotype files
 *.bed
@@ -46,3 +47,10 @@ __pycache__/
 
 # System files
 .DS_Store
+
+*.pkl
+*.pdf
+logs/
+abc_results/
+csfs/
+eigenstrat/
