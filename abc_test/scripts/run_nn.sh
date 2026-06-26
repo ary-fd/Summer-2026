@@ -11,6 +11,6 @@ source /u/project/sriram/aryadini/miniforge3/etc/profile.d/conda.sh
 conda activate msprime_env
 
 python csfs_code/train_nn.py \
-    --results-dir abc_results \
+    --results-dir abc_results_10M \
     --observed    csfs/averaged_csfs.npy \
-    --out-dir     abc_results
+    --out-dir     abc_results_10M

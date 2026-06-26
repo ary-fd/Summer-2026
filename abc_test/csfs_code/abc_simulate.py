@@ -220,7 +220,10 @@ def main():
     parser.add_argument("--task-id",  type=int, required=True)
     parser.add_argument("--n-sims",   type=int, default=200)
     parser.add_argument("--out-dir", type=str, default="abc_results")
+    parser.add_argument("--nsite", type=int, default=1000000)
     args = parser.parse_args()
+
+    FIXED["nsite"] = args.nsite
 
     os.makedirs(args.out_dir, exist_ok=True)
 

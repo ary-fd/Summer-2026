@@ -3,7 +3,7 @@
 #$ -j y
 #$ -N abc_sim
 #$ -l h_data=8G,h_rt=08:00:00
-#$ -t 1-250
+#$ -t 1-375
 #$ -o /u/scratch/a/aryadini/Summer-2026/abc_test/logs/$JOB_NAME.$TASK_ID.o$JOB_ID
 set -x
 
@@ -14,4 +14,5 @@ conda activate msprime_env
 python csfs_code/abc_simulate.py \
     --task-id  $SGE_TASK_ID \
     --n-sims   200 \
-    --out-dir  abc_results
+    --out-dir  abc_results_10M \
+    --nsite    10000000
