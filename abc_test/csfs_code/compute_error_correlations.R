@@ -56,10 +56,6 @@ pairs(
         points(x, y, pch = 19, col = rgb(0, 0, 1, 0.3))
         abline(h = 0, v = 0, col = "red", lty = 2)  # zero-error reference lines
         abline(lm(y ~ x), col = "darkred", lwd = 1.5)  # trend line
-    },
-    diag.panel = function(x, ...) {
-        hist(x, main = "", col = "steelblue", border = "white", add = FALSE)
-        abline(v = 0, col = "red", lty = 2)
     }
 )
 
