@@ -2,7 +2,7 @@
 #$ -cwd
 #$ -j y
 #$ -N abc_sim
-#$ -l h_data=8G,h_rt=08:00:00
+#$ -l h_data=30G,h_rt=08:00:00
 #$ -t 1-375
 #$ -o /u/scratch/a/aryadini/Summer-2026/abc_test/logs/$JOB_NAME.$TASK_ID.o$JOB_ID
 set -x

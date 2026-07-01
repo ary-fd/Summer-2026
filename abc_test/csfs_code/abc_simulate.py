@@ -91,7 +91,6 @@ def simulate_and_compute_csfs(params, rng, sim_rng):
     admix_frac = params["admix_frac"]
     ghost_ne   = params["ghost_ne"]
 
-
     try:
         graph = build_graph(split_time, admix_time, admix_frac, ghost_ne)
         demography = msprime.Demography.from_demes(graph)

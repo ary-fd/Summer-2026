@@ -1,5 +1,17 @@
 """
-Compute the Conditional Site Frequency Spectrum (CSFS) 
+Compute the Conditional Site Frequency Spectrum (CSFS) as defined in
+Durvasula & Sankararaman 2020 (Sci. Adv. 6, eaax5097).
+
+Definition (from paper, Materials & Methods):
+    CSFS_{pop1, pop2}[k] = number of SNPs at which the derived allele
+    is present on k chromosomes in a sample of n total chromosomes in
+    pop1 (Africans), while a single randomly sampled chromosome from
+    the archaic outgroup pop2 (Neanderthal) carries the derived allele.
+
+    k ranges over {1, 2, ..., n-1}  (excludes fixed sites).
+
+Under a neutral model with no admixture, the CSFS is expected to be
+uniform. Deviation (U-shape) is evidence of ghost archaic introgression.
 
 Input
 -----
@@ -41,19 +53,18 @@ def _infer_n_african(kept_individuals):
 
 def _derived_dosage(dosage_row, ancestral, ref, alt):
     """
-    Convert haploid alt-dosage row to derived-allele dosage row.
-    
-    Haploid encoding: 0 = ancestral allele, 1 = alt allele, -1 = missing.
-    If alt is derived: derived_dosage = dosage as-is.
-    If ref is derived: derived_dosage = 1 - dosage (flip 0 and 1).
+    Convert alt-dosage row to derived-allele dosage row.
+
+    If alt is derived: derived_dosage = dosage (0/1/2).
+    If ref is derived: derived_dosage = 2 - dosage.
     Missing (-1) stays -1.
     """
     if ancestral == ref:
-        # alt is derived — dosage already counts derived copies
+        # alt is derived — dosage already counts alt copies
         return dosage_row.copy()
     else:
-        # ref is derived — flip: 0→1, 1→0, missing stays -1
-        out = np.where(dosage_row == -1, -1, 1 - dosage_row)
+        # ref is derived — flip: 0→2, 1→1, 2→0, missing stays -1
+        out = np.where(dosage_row == -1, -1, 2 - dosage_row)
         return out.astype(np.int8)
 
 
@@ -120,31 +131,22 @@ def compute_csfs(
     if n_african is None:
         n_african = _infer_n_african(kept_individuals)
 
-    n_neanderthal = len(kept_individuals) - n_african
-    n_chrom_max   = n_african
-
+    n_chrom_max = 2 * n_african  # each African column is a diploid individual
     if min_african_chrom is None:
         min_african_chrom = n_chrom_max  # require no missing data by default
 
-    afr_cols = geno_array[:, :n_african]          # (n_snps, n_afr)
-    nea_cols = geno_array[:, n_african:]          # (n_snps, n_nea)
+    afr_cols = geno_array[:, :n_african]  # (n_snps, n_afr)
+    nea_cols = geno_array[:, n_african:]  # (n_snps, n_nea)
 
     csfs = np.zeros(n_chrom_max - 1, dtype=np.int64)  # bins k=1..n_chrom_max-1
-
     rng = np.random.default_rng(seed=42)
 
     for i, snp in enumerate(snp_info):
-        ref = snp["ref"]
-        alt = snp["alt"]
-        anc = snp["ancestral"]
+        ref, alt, anc = snp["ref"], snp["alt"], snp["ancestral"]
 
         # ---- Archaic condition ----------------------------------------
-        nea_row_raw = nea_cols[i]  # alt-dosage for Neanderthal individuals
-
-        # Convert to derived dosage for archaic
-        nea_derived = _derived_dosage(nea_row_raw, anc, ref, alt)
+        nea_derived = _derived_dosage(nea_cols[i], anc, ref, alt)
         nea_nonmiss = nea_derived[nea_derived != -1]
-
         if len(nea_nonmiss) == 0:
             continue  # no archaic data
 
@@ -167,25 +169,16 @@ def compute_csfs(
                 continue
 
         # ---- African derived allele count -----------------------------
-        afr_row_raw = afr_cols[i]
-        afr_derived = _derived_dosage(afr_row_raw, anc, ref, alt)
+        afr_derived = _derived_dosage(afr_cols[i], anc, ref, alt)
+        afr_nonmiss = afr_derived[afr_derived != -1]
 
-        missing_mask = afr_derived == -1
-        n_chrom_this = 2 * np.sum(~missing_mask.reshape(n_african))
-        # Each individual contributes 2 chromosomes; missing individuals
-        # (all -1 for that individual) reduce the count.
-        # Simpler: count non-missing allele slots directly.
-        afr_flat = afr_derived  # shape (n_african,) — diploid dosage values
-        # count of non-missing chromosomes = 2 * non-missing individuals
-        # (EIGENSTRAT dosage is per-individual, not per-chromosome)
-        n_nonmiss_inds = np.sum(afr_flat != -1)
-        n_chrom_this = n_nonmiss_inds  # not 2 * n_nonmiss_inds
-
+        # Each individual's dosage counts 2 chromosomes (diploid), so the
+        # usable chromosome total scales with non-missing individuals.
+        n_chrom_this = 2 * len(afr_nonmiss)
         if n_chrom_this < min_african_chrom:
             continue
 
-        # Derived allele count k (sum of dosage values, ignoring missing)
-        k = int(np.sum(afr_flat[afr_flat != -1]))
+        k = int(afr_nonmiss.sum())  # derived allele count
 
         # Exclude fixed sites (k=0 or k=n_chrom_this)
         if k == 0 or k == n_chrom_this:
