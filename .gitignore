@@ -11,6 +11,7 @@
 *.bcf
 *.npy
 *.csv
+*.rds
 
 #PLINK genotype files
 *.bed
