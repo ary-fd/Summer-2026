@@ -7,7 +7,6 @@ Usage (called by array job):
 """
 
 import argparse
-import csv
 import sys
 import os
 import numpy as np
@@ -23,8 +22,8 @@ from filter_derived_alleles import filter_derived_shared
 # ---------------------------------------------------------------------------
 # All times in generations (gen_time = 20 years)
 PRIORS = {
-    "split_time":       (6_201,   100_000),   # in generations
-    "admix_time":       (100,       6_200),    # in generations
+    "split_time":       (5_000,   100_000),   # 100ka to 2Ma in generations
+    "admix_time":       (100,       6_200),    # ~2ka to 124ka in generations
     "admix_frac":       (0.02,      0.50),
     "ghost_ne":         (10_000,   50_000),
 }
@@ -41,10 +40,9 @@ FIXED = {
     "nsite":           1_000_000,
     "mu":               1.25e-8,
     "rec_rate":         1e-8,
-    "n_africa_individuals":     50,  # diploid Africans sampled
-    "n_neanderthal_haplotypes": 1,    # single haploid Neanderthal genome
+    "n_africa":         100,       # haplotypes
+    "n_neanderthal":    1,         # haplotype
 }
-FIXED["n_africa_haplotypes"] = 2 * FIXED["n_africa_individuals"]  # = 100
 
 
 # ---------------------------------------------------------------------------
@@ -91,20 +89,22 @@ def simulate_and_compute_csfs(params, rng, sim_rng):
     admix_frac = params["admix_frac"]
     ghost_ne   = params["ghost_ne"]
 
+    # Validate: split_time must be > human_nea_split, admix_time < nea_extinction
+    if split_time <= FIXED["human_nea_split"]:
+        return None
+    if admix_time >= FIXED["nea_extinction"]:
+        return None
+    if admix_time >= split_time:
+        return None
 
     try:
         graph = build_graph(split_time, admix_time, admix_frac, ghost_ne)
         demography = msprime.Demography.from_demes(graph)
 
-        # Africa: n_africa_individuals diploid people -> n_africa_haplotypes
-        # chromosomes. Neanderthal: a single haploid genome (ploidy=1 override),
-        # not a diploid individual, so we get exactly 1 sampled chromosome.
-        samples = [
-            msprime.SampleSet(FIXED["n_africa_individuals"],
-                               population="Africa", ploidy=2),
-            msprime.SampleSet(FIXED["n_neanderthal_haplotypes"],
-                               population="Neanderthal", ploidy=1),
-        ]
+        samples = {
+            "Africa":      FIXED["n_africa"],
+            "Neanderthal": FIXED["n_neanderthal"],
+        }
 
         ts = msprime.sim_ancestry(
             samples=samples,
@@ -120,17 +120,20 @@ def simulate_and_compute_csfs(params, rng, sim_rng):
             random_seed=int(sim_rng.integers(1, 2**31)),
         )
 
-        # One dosage column per sampled individual (Africans: sum of their
-        # 2 haplotypes, 0/1/2; Neanderthal: its single haplotype, 0/1).
-        afr_geno, afr_snps = _ts_to_dosage_arrays(ts, _popid(ts, "Africa"))
-        nea_geno, nea_snps = _ts_to_dosage_arrays(ts, _popid(ts, "Neanderthal"))
+        # Write temporary eigenstrat files
+        afr_pop  = ts.samples(population=_popid(ts, "Africa"))
+        nea_pop  = ts.samples(population=_popid(ts, "Neanderthal"))
+
+        afr_geno, afr_snps = _ts_to_arrays(ts, afr_pop)
+        nea_geno, nea_snps = _ts_to_arrays(ts, nea_pop)
 
         if afr_geno.shape[0] == 0:
             return None
 
         # Filter and compute CSFS directly in memory
         geno_array, snp_info, kept_inds, _ = _filter_in_memory(
-            afr_geno, afr_snps, nea_geno, nea_snps
+            afr_geno, afr_snps, nea_geno, nea_snps,
+            FIXED["n_africa"], FIXED["n_neanderthal"]
         )
 
         if geno_array.shape[0] == 0:
@@ -138,7 +141,7 @@ def simulate_and_compute_csfs(params, rng, sim_rng):
 
         csfs, n_chrom = compute_csfs(
             geno_array, snp_info, kept_inds,
-            n_african=FIXED["n_africa_individuals"],
+            n_african=FIXED["n_africa"],
         )
 
         return csfs
@@ -155,23 +158,13 @@ def _popid(ts, name):
     raise ValueError(f"Population {name} not found")
 
 
-def _ts_to_dosage_arrays(ts, pop_id):
-    """
-    Convert tree sequence to (dosage_matrix, snp_list) for a population.
-
-    One column per *individual* (not per haplotype): dosage = number of
-    alt-allele copies summed across that individual's nodes (0-2 for a
-    diploid, 0-1 for a haploid, per SampleSet(ploidy=...) at sampling time).
-    This matches the per-individual dosage format compute_csfs expects.
-    """
-    node_groups = [ind.nodes for ind in ts.individuals() if ind.population == pop_id]
-
+def _ts_to_arrays(ts, pop_samples):
+    """Convert tree sequence to (geno_matrix, snp_list) for a population."""
     rows = []
     snps = []
     for variant in ts.variants():
-        geno = variant.genotypes
-        dosage = np.array([geno[nodes].sum() for nodes in node_groups], dtype=np.int8)
-        rows.append(dosage)
+        geno = variant.genotypes[pop_samples]
+        rows.append(geno.astype(np.int8))
         pos = int(variant.site.position)
         snps.append({
             "id": f"1:{pos}", "chrom": "1",
@@ -181,13 +174,11 @@ def _ts_to_dosage_arrays(ts, pop_id):
         })
     if rows:
         return np.vstack(rows), snps
-    return np.empty((0, len(node_groups)), dtype=np.int8), []
+    return np.empty((0, len(pop_samples)), dtype=np.int8), []
 
 
-def _filter_in_memory(afr_geno, afr_snps, nea_geno, nea_snps):
+def _filter_in_memory(afr_geno, afr_snps, nea_geno, nea_snps, n_afr, n_nea):
     """Filter SNPs where derived allele present in both Africa and Neanderthal."""
-    n_afr = afr_geno.shape[1]
-    n_nea = nea_geno.shape[1]
     passing_afr, passing_nea, passing_snps = [], [], []
 
     for i, snp in enumerate(afr_snps):
@@ -236,68 +227,51 @@ def main():
 
     os.makedirs(args.out_dir, exist_ok=True)
 
-    # Per-task files (one shard per array-job task, matching the old .npy
-    # layout) so concurrent tasks never write to the same file. Concatenate
-    # the shards afterward (e.g. `csvstack` or pandas.concat over the glob)
-    # to get the two combined CSVs.
-    params_path = os.path.join(args.out_dir, f"params_task{args.task_id}.csv")
-    csfs_path   = os.path.join(args.out_dir, f"csfs_task{args.task_id}.csv")
-
-    param_names = list(PRIORS.keys())
-
     # Separate RNGs for parameter draws and simulations
     rng     = np.random.default_rng(seed=args.task_id * 1000)
     sim_rng = np.random.default_rng(seed=args.task_id * 1000 + 1)
 
-    n_success = 0
-    n_attempt = 0
-    csfs_header_written = False
+    all_params = []
+    all_csfs   = []
+    n_success  = 0
+    n_attempt  = 0
 
-    with open(params_path, "w", newline="") as params_f, \
-         open(csfs_path,   "w", newline="") as csfs_f:
+    while n_success < args.n_sims:
+        n_attempt += 1
 
-        params_writer = csv.writer(params_f)
-        csfs_writer   = csv.writer(csfs_f)
+        # Draw parameters from uniform priors
+        params = {
+            key: float(rng.uniform(lo, hi))
+            for key, (lo, hi) in PRIORS.items()
+        }
+        # Split time and ghost Ne should be integers
+        params["split_time"] = int(params["split_time"])
+        params["ghost_ne"]   = int(params["ghost_ne"])
 
-        params_writer.writerow(["task_id", "sim_id"] + param_names)
+        csfs = simulate_and_compute_csfs(params, rng, sim_rng)
+        if csfs is None:
+            continue
 
-        while n_success < args.n_sims:
-            n_attempt += 1
+        all_params.append([
+            params["split_time"],
+            params["admix_time"],
+            params["admix_frac"],
+            params["ghost_ne"],
+        ])
+        all_csfs.append(csfs)
+        n_success += 1
 
-            # Draw parameters from uniform priors
-            params = {
-                key: float(rng.uniform(lo, hi))
-                for key, (lo, hi) in PRIORS.items()
-            }
-            # Split time and ghost Ne should be integers
-            params["split_time"] = int(params["split_time"])
-            params["ghost_ne"]   = int(params["ghost_ne"])
+        if n_success % 20 == 0:
+            print(f"Task {args.task_id}: {n_success}/{args.n_sims} complete "
+                  f"({n_attempt} attempts)")
 
-            csfs = simulate_and_compute_csfs(params, rng, sim_rng)
-            if csfs is None:
-                continue
+    all_params = np.array(all_params, dtype=np.float32)
+    all_csfs   = np.array(all_csfs,   dtype=np.float32)
 
-            if not csfs_header_written:
-                csfs_writer.writerow(
-                    ["task_id", "sim_id"] + [f"csfs_k{k+1}" for k in range(len(csfs))]
-                )
-                csfs_header_written = True
-
-            params_writer.writerow(
-                [args.task_id, n_success] + [params[key] for key in param_names]
-            )
-            csfs_writer.writerow([args.task_id, n_success] + list(csfs))
-
-            n_success += 1
-
-            if n_success % 20 == 0:
-                params_f.flush()
-                csfs_f.flush()
-                print(f"Task {args.task_id}: {n_success}/{args.n_sims} complete "
-                      f"({n_attempt} attempts)")
-
+    np.save(f"{args.out_dir}/params_task{args.task_id}.npy", all_params)
+    np.save(f"{args.out_dir}/csfs_task{args.task_id}.npy",   all_csfs)
     print(f"Task {args.task_id}: saved {n_success} simulations "
-          f"({n_attempt} attempts total) to {params_path} and {csfs_path}")
+          f"({n_attempt} attempts total)")
 
 
 if __name__ == "__main__":

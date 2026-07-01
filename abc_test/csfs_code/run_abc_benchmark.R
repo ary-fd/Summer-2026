@@ -22,7 +22,7 @@ for (i in 1:n_test) {
         target  = target_i,
         param   = params,
         sumstat = sim_csfs,
-        tol     = 0.005,
+        tol     = 0.05,
         method  = "neuralnet"
     )
 
@@ -34,7 +34,7 @@ for (i in 1:n_test) {
 }
 
 # Save everything for the metrics script
-saveRDS(posteriors,   "abc_results_10M/benchmark_posteriors.rds")
-saveRDS(params_test,  "abc_results_10M/benchmark_params_true.rds")
+saveRDS(posteriors,   "abc_results_10M/benchmark_posterior_0.5.rds")
+saveRDS(params_test,  "abc_results_10M/benchmark_params_true_0.5.rds")
 
 cat("Done. Saved posteriors to benchmark_posteriors.rds\n")

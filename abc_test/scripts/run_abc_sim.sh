@@ -14,5 +14,5 @@ conda activate msprime_env
 python csfs_code/abc_simulate.py \
     --task-id  $SGE_TASK_ID \
     --n-sims   200 \
-    --out-dir  abc_results_10M \
+    --out-dir  abc_results_fix_10M \
     --nsite    10000000
