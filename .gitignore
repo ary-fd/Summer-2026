@@ -10,6 +10,7 @@
 *.vcf.gz
 *.bcf
 *.npy
+*.csv
 
 #PLINK genotype files
 *.bed
